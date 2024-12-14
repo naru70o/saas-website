@@ -17,5 +17,5 @@ const features = [
 ];
 
 export const Features = () => {
-  return null;
+  return <div className="bg-black"></div>;
 };
