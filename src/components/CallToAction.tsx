@@ -23,8 +23,11 @@ export const CallToAction = () => {
           Celebrate the joy of accomplishment with an app designed to track your
           progress and motivate your efforts.
         </p>
-        <form className="flex flex-col mt-10 gap-2.5 max-w-sm mx-auto sm:flex-row flex-1">
-          <input className="h-12 bg-white/20 rounded-lg px-5 font-medium placeholder:text-[#9CA3AF]" />
+        <form className="flex flex-col mt-10 gap-2.5 max-w-sm mx-auto sm:flex-row sm:flex-1">
+          <input
+            className="h-12 bg-white/20 rounded-lg px-5 font-medium placeholder:text-[#9CA3AF]"
+            placeholder="your@email.com"
+          />
           <button className="h-12 bg-white text-black px-5 rounded-lg">
             Get access
           </button>

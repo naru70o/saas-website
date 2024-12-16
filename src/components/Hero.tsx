@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import ArrowWicon from "../assets/icons/arrow-w.svg";
 import cursorImage from "../assets/images/cursor.png";
 import messageImage from "../assets/images/message.png";
+import { motion } from "framer-motion";
+
 export const Hero = () => {
   return (
     <div className="bg-[linear-gradient(to_bottom,#000,#200D42,#200D42,#4F21A1,#A46EDB)] py-[72px] text-white overflow-clip-webkit">
@@ -30,20 +34,34 @@ export const Hero = () => {
               One Task <br />
               at a Time
             </h1>
-            <Image
-              src={cursorImage}
-              height="200"
-              width="200"
-              alt="cursor-imag"
+            <motion.div
               className="absolute right-[476px] top-[108px] sm:inline hidden"
-            />
-            <Image
-              src={messageImage}
-              height="200"
-              width="200"
-              alt="message-image"
+              drag
+              dragSnapToOrigin
+            >
+              <Image
+                src={cursorImage}
+                height="200"
+                width="200"
+                alt="cursor-imag"
+                className="max-w-none"
+                draggable="false"
+              />
+            </motion.div>
+            <motion.div
               className="absolute left-[496px] top-[56px] hidden sm:inline"
-            />
+              drag
+              dragSnapToOrigin
+            >
+              <Image
+                src={messageImage}
+                height="200"
+                width="200"
+                alt="message-image"
+                className="max-w-none"
+                draggable="false"
+              />
+            </motion.div>
           </div>
         </div>
         <p className="text-center text-2xl mt-8 max-w-md mx-auto">
