@@ -69,7 +69,7 @@ export const Hero = () => {
           progress, motivate your efforts, and celebrate your successes.
         </p>
         <div className="flex justify-center mt-8">
-          <button className="text-black py-3 px-5 bg-white  rounded-lg">
+          <button className="py-3 px-5 bg-white  rounded-lg text-black/70 hover:text-black transition-all duration-150">
             Get for free
           </button>
         </div>
