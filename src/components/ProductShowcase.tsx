@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import appScreen from "../assets/images/app-screen.png";
+import { motion, useScroll } from "framer-motion";
 
 export const ProductShowcase = () => {
   return (
