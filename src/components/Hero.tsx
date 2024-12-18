@@ -8,9 +8,9 @@ import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
-    <div className="bg-[linear-gradient(to_bottom,#000,#200D42,#200D42,#4F21A1,#A46EDB)] py-[72px] text-white overflow-clip-webkit">
+    <div className="bg-[linear-gradient(to_bottom,#000,#200D42,#200D42,#4F21A1,#A46EDB)] py-[72px] relative text-white overflow-clip-webkit overflow-clip">
       {/* cicle */}
-      <div className="absolute h-[375px] w-[750px] sm:w-[1536px] sm:h-[768px] lg:w-[2400px] lg:h-[1200px] rounded-[100%] bg-black -translate-x-1/2 left-1/2 border border-[#B48CDE] bg-[radial-gradient(closest-side,#000_62%,#9560EB)] top-[calc(100%-96px)] md:top-[calc(100%-180px)] sm:top-[calc(100%-300px)] z-0 hidden"></div>
+      <div className="absolute h-[375px] w-[750px] sm:w-[1536px] sm:h-[768px] rounded-[100%] lg:w-[2400px] lg:h-[1200px] bg-black -translate-x-1/2 left-1/2 border border-[#B48CDE] bg-[radial-gradient(closest-side,#00000052,#000_82%,#9560EB)] top-[calc(100%-96px)] md:top-[calc(100%-96px)] sm:top-[calc(100%-124px)] "></div>
       {/* content */}
       <div className="container relative ">
         {/* vertion link */}
