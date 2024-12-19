@@ -139,10 +139,3 @@ export const Navbar = () => {
     </div>
   );
 };
-/*
-${
-              isOpen
-                ? "flex flex-col backdrop-blur-sm bg-[#f87bff53] h-screen overflow-hidden w-screen "
-                : ""
-            }
-*/
