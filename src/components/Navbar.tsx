@@ -1,42 +1,46 @@
 "use client";
-
 import HumbergerMenu from "@/ui/HumbergerMenu";
 import Image from "next/image";
-import navLogo from "../assets/images/logosaas.png";
 import { useState } from "react";
+import navLogo from "../assets/images/logosaas.png";
+import { motion, AnimatePresence } from "framer-motion";
 export const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="bg-black">
       <div className="px-4">
         <div className="py-4 flex items-center justify-between">
-          {!isOpen && (
-            <>
-              <div className="relative">
-                <div>
-                  <div className="absolute w-full top-2 bottom-0 bg-[linear-gradient(to_right,#F87BFF,#FB92CF,#FFDD9B,#C2F0B1,#2FD8FE)] blur-md"></div>
-                  <Image
-                    src={navLogo}
-                    alt="Saas logo"
-                    className="h-12 w-12 relative"
-                  />
-                </div>
+          <>
+            <div className="relative">
+              <div>
+                <div
+                  className={`absolute w-full top-2 bottom-0 bg-[linear-gradient(to_right,#F87BFF,#FB92CF,#FFDD9B,#C2F0B1,#2FD8FE)] blur-md `}
+                ></div>
+                <Image
+                  src={navLogo}
+                  alt="Saas logo"
+                  className={`h-12 w-12 relative ${isOpen ? "hidden" : ""}`}
+                />
               </div>
-              {/* icon */}
-              <div className="border border-white border-opacity-30 h-10 w-10 inline-flex justify-center items-center rounded-lg sm:hidden">
-                <HumbergerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
-              </div>
-            </>
-          )}
+            </div>
+            {/* icon */}
+            <div
+              className={`border border-white border-opacity-30 h-10 w-10 inline-flex justify-center items-center rounded-lg sm:hidden  ${
+                isOpen ? "hidden" : ""
+              }`}
+            >
+              <HumbergerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+            </div>
+          </>
 
-          {/* Message */}
+          {/* big screens nav */}
 
           <nav
-            className={`hidden sm:flex items-center transition-all duration-150 text-white gap-6 `}
+            className={`hidden sm:flex items-center transition-all duration-150 text-white gap-6`}
           >
             <a
               href="#"
-              className="opacity-60 hover:opacity-100  transition-all duration-150 text-white hover:text-opacity-100"
+              className="opacity-60 hover:opacity-100 transition-all duration-150 text-white hover:text-opacity-100"
             >
               Home
             </a>
@@ -72,11 +76,19 @@ export const Navbar = () => {
             </a>
           </nav>
 
+          {/* mobile nav */}
           {/*  */}
           {isOpen && (
-            <>
-              <div className="bg-white/20 backdrop-blur-3xl h-screen overflow-hidden w-screen sm:hidden relative z-1">
-                <div className="absolute top-0 right-0 m-4">
+            <AnimatePresence>
+              <motion.div
+                className={`bg-[#f87aff62] inset-0 backdrop-blur-xl h-screen overflow-hidden w-screen sm:hidden relative ${
+                  isOpen ? "visible" : "hidden"
+                }`}
+                initial={{ translateY: -100, opacity: 0 }}
+                animate={{ translateY: 0, opacity: 1 }}
+                exit={{ translateY: -100, opacity: 0 }}
+              >
+                <div className="absolute top-0 right-0 m-2">
                   <HumbergerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
                 </div>
                 <nav
@@ -119,8 +131,8 @@ export const Navbar = () => {
                     Get for free
                   </a>
                 </nav>
-              </div>
-            </>
+              </motion.div>
+            </AnimatePresence>
           )}
         </div>
       </div>
