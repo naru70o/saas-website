@@ -1,0 +1,11 @@
+.mobile-menu {
+  animation: toBottomLeft 5s ease-in-out;
+}
+@keyframes toBottomLeft {
+  from {
+    transform: translate(100%, -100%);
+  }
+  to {
+    transform: translate(-100%, 100%);
+  }
+}
