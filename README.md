@@ -2,7 +2,7 @@
 
 This project is a starter template for the dark theme SaaS landing page project created by Frontend Tribe.
 
-This project includes elements adapted from "SaaS Website UI Kit" by Framer. Retrieved from [Source Link](https://www.figma.com/community/file/1347551304372055519) (licensed under CC BY 4.0).
+This project includes elements adapted from "SaaS Website UI Kit" by Framer. 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -37,6 +37,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform] https://saas-website-beta.vercel.app/ from the creators of Next.js.
