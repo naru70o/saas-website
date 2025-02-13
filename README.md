@@ -25,4 +25,4 @@ To get started with this project locally, clone the repository and install depen
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/saas-website.git
+   git clone https://github.com/naru70o/saas-website.git
